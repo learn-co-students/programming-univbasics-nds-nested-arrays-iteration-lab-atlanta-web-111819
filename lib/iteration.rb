@@ -6,12 +6,23 @@ def join_ingredients(src)
   #
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair
+  out = []
+  src.each do |arr|
+    s = "I love #{arr[0]} and #{arr[1]} on my pizza"
+    out << s
+  end
+  out
 end
 
 def find_greater_pair(src)
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # Produce a new Array that contains the larger number of each of the pairs
   # that are in the inner Arrays
+  out = []
+  src.each do |pair|
+    out << ((pair[0] > pair[1]) ? pair[0] : pair[1])
+  end
+  out
 end
 
 def total_even_pairs(src)
@@ -22,4 +33,11 @@ def total_even_pairs(src)
   # As a reminder any number % 2 will return 0 or 1. If the result is 0, then
   # the number was even. Review the operator documentation if you've forgotten
   # this!
+  total = 0
+  src.each do |pair|
+    if pair[0].even? and pair[1].even?
+      total += pair[0] + pair[1]
+    end
+  end
+  total
 end
