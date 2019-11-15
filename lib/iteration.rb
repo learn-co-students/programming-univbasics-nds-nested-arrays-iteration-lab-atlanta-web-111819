@@ -1,3 +1,5 @@
+'''ruby
+
 def join_ingredients(src)
   good_ingredients = [
     ["banana", "apple"], ["smores", "chocolate"],
@@ -25,7 +27,7 @@ def total_even_pairs(src)
     ["5", "60"], ["70", "6"],
     ["7", "80"], ["90", "8"]
   ]
-  
+
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # if both numbers in the pair are even, then add both those numbers to the
   # total
